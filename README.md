@@ -15,12 +15,15 @@ https://github.com/ciencialatitud0/EPIC_2/blob/main/Programa_es.md
 
 ## Organizado por:
 1. Grupo de Investigadores Latitud Cero.
+
 https://sites.google.com/view/ciencia-latitud-0
 
 2. Escuela de Ciencias Físicas y Nanotecnología de Yachay Tech
+
 https://www.yachaytech.edu.ec/en/physicsandnanotech
 
 3. Departamento de Física de la Escuela Politécnica Nacional
+
 https://fisica.epn.edu.ec
 
 
