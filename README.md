@@ -1,1 +1,1 @@
-# EPIC_2
+# School EPIC_2
