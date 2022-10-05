@@ -1,6 +1,6 @@
 # EPIC 2: Day 2
 
-Wednesday 12-Octubre-2022
+Wednesday 12-October-2022
 
 
 | Time  | Wednesday |
