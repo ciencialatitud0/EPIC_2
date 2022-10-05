@@ -10,6 +10,9 @@ Al final de este taller virtual l@s estudiantes podrán realizar análisis de da
 ## Duración: 
 4 días que incluyen 14 charlas y 5 tutoriales
 
+## Sitio web:
+https://sites.google.com/view/ciencia-latitud-0/EPIC/EPIC-2
+
 ## Programa:
 https://github.com/ciencialatitud0/EPIC_2/blob/main/Programa_es.md
 
@@ -41,6 +44,9 @@ Online (Zoom)
 
 ## Duration:
 4 days including 14 talks and 5 tutorial sessions
+
+## Website:
+https://sites.google.com/view/ciencia-latitud-0-en/EPIC/EPIC-2
 
 ## Programme:
 https://github.com/ciencialatitud0/EPIC_2/blob/main/Programme_en.md
