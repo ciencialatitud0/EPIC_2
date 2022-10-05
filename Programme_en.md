@@ -3,15 +3,16 @@
 
 | Time  | Tuesday | Wednesday | Thursday | Friday |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 8:00 - 8:50  | Python Basics (Lupe Villegas)  | | | |
-| 8:50 - 8:55  |  Break | | | |
+| 07:50 - 8:00  | Welcome  | | | |
+| 8:00 - 8:50  | Python Basics (Lupe Villegas)  | Materials science (Maximilian Menger)	| | |
+| 8:50 - 8:55  |  Break | Break | Break | Break |
 | 8:55 - 9:45 | Artificial Inteligence talk (Albert Thie)  | | | |
 | 9:45 - 10:35  | Materials Science Talk (Jorge Ontaneda)  | | | |
-| 10:35 - 10:40  |  Break | | | |
+| 10:35 - 10:40  |  Break | Break | Break | Break |
 | 10:40 - 11:30  | Medical physics talk (Mayra Pallaroso) | | | |
-| 11:30 - 11:40  |  Break | | | |
+| 11:30 - 11:40  |  Break | Break | Break| Break|
 | 11:40 - 12:30  | Particle Physics Talk (Cloé Girard-Carillo) | | | |
 | 12:30 - 13:20  | Cosmology Talk (TBC)  | | | |
-| 13:20 - 14:20  |  Break | | | |
+| 13:20 - 14:20  |  Break | Break | Break | Break |
 | 14:20 - 16:00  | Python Basics 2 | | | |
 
