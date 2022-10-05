@@ -1,4 +1,6 @@
-# Friday 14-October-2022
+# EPIC 2: Day 4
+
+Friday 14-October-2022
 
 | Time  | Friday |
 | ------------- | ------------- | 
