@@ -48,6 +48,6 @@ Online (Zoom)
 ## Website:
 https://sites.google.com/view/ciencia-latitud-0-en/EPIC/EPIC-2
 
-## Programme:
+## Program:
 https://github.com/ciencialatitud0/EPIC_2/blob/main/Programme_en.md
 
