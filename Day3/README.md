@@ -1,4 +1,4 @@
-Thursday 13-Octubre-2022
+# Thursday 13-October-2022
 
 | Time  | Thursday |
 | ------------- | ------------- | 
