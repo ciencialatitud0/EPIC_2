@@ -1,4 +1,4 @@
-# Friday 14-Octubre-2022
+# Friday 14-October-2022
 
 | Time  | Friday |
 | ------------- | ------------- | 
