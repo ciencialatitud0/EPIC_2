@@ -1,4 +1,6 @@
-# Thursday 13-October-2022
+# EPIC 2: Day 3
+
+Thursday 13-October-2022
 
 | Time  | Thursday |
 | ------------- | ------------- | 
