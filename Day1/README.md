@@ -15,4 +15,4 @@ Tuesday 11-October-2022
 | 11:40 - 12:30  | Particle Physics Talk (Cloé Girard-Carillo) |
 | 12:30 - 13:20  | Cosmology Talk (Sylvain Vanneste)  |
 | 13:20 - 14:20  |  Break |
-| 14:20 - 16:00  | Python Basics 2 |
+| 14:20 - 16:00  | Python Basics 2 (Wladimir Banda-Barragán)|
