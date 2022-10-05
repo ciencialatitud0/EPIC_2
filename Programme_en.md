@@ -6,7 +6,7 @@
 | 07:50 - 8:00  | Welcome  | | | |
 | 8:00 - 8:50  | Python Basics (Lupe Villegas)  | Materials science (Maximilian Menger)	| | |
 | 8:50 - 8:55  |  Break | Break | Break | Break |
-| 8:55 - 9:45 | Artificial Inteligence talk (Albert Thie)  | | | |
+| 8:55 - 9:45 | Artificial Inteligence talk (Albert Thie)  | Tutorials Materials science / Particle physics| | |
 | 9:45 - 10:35  | Materials Science Talk (Jorge Ontaneda)  | | | |
 | 10:35 - 10:40  |  Break | Break | Break | Break |
 | 10:40 - 11:30  | Medical physics talk (Mayra Pallaroso) | | | |
