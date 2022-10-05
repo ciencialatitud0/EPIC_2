@@ -18,3 +18,15 @@ Tuesday 11-Octubre-2022
 5. Particle Physics Talk (Cloé Girard-Carillo)
 
 6. Cosmology Talk (TBC)
+
+| Time  |  |
+| ------------- | ------------- |
+|   | Python Basics (Lupe Villegas)  |
+|   |  Break |
+|   | Artificial Inteligence talk (Albert Thie)  |
+|   | Materials Science Talk (Jorge Ontaneda)  |
+|   |  Break |
+|   | Medical physics talk (Mayra Pallaroso) |
+|   |  Break |
+|   | Particle Physics Talk (Cloé Girard-Carillo) |
+|   | Cosmology Talk (TBC)  |
