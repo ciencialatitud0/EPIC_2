@@ -4,8 +4,7 @@
 | Time  | Tuesday | Wednesday | Thursday | Friday |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 07:50 - 8:00  | Welcome  | | | |
-| 8:00 - 8:50  | Python Basics (Lupe Villegas)  | Materials science (Maximilian Menger)	| Biophysics (Daniel Čapek) | Climat science (Oscar Chimborazo)
-|
+| 8:00 - 8:50  | Python Basics (Lupe Villegas)  | Materials science (Maximilian Menger)	| Biophysics (Daniel Čapek) | Climat science (Oscar Chimborazo)|
 | 8:50 - 8:55  |  Break | Break | Break | Break |
 | 8:55 - 9:45 | Artificial Inteligence talk (Albert Thie)  | Tutorials Materials science / Particle physics| Tutorials Biophysics / Astrophysics | Micromagnetic simulations (María José Benítez) |
 | 9:45 - 10:35  | Materials Science Talk (Jorge Ontaneda)  | Tutorials Materials science / Particle physics| Tutorials Biophysics / Astrophysics | Data Science (Genevieve Shattow) |
