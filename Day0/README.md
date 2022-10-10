@@ -2,23 +2,25 @@
 
 Please read carefully all the information given below.
 
-This School focuses on python, but there are a few lectures and tutorials on julia and R. We will use python 3.x (as python2 is not supported anymore). Similarly, we will mainly use jupyter notebooks (.ipynb) for the courses taught at this School.
+This School focuses mainly on python, but there are a few lectures and tutorials on julia (https://julialang.org/) and R (https://www.r-project.org/). We will use python 3.x (as python2 is not supported anymore). Similarly, we will mainly use jupyter notebooks (.ipynb) for the courses taught at this School.
 
-- Jupyter notebooks are very useful tools for learning programming because they provide a visual interface.
+- Jupyter notebooks are very useful tools for learning programming because they provide a nice visual and interactive interface.
+
 - You can see the results of your code live, instead of waiting till your script (.py) finishes running in a terminal.
 
 To be able to use python and jupyter notebooks in your laptop, there are several options:
 
 ## OPTION 1: Google Colab (see https://colab.research.google.com/):
 
-<p style="color:blue">Note: We highly recommend this option for participants with little programming experience.</p>
+** Important Note: We highly recommend this option for participants with little programming experience.**
 
-One option is to use Google Colab, for which you would need a Google account, which can be a personal gmail account or an institutional email supported by Google (e.g. all Yachay Tech accounts are Google accounts). The advantage of using Google Colab is that all libraries are installed in a Linux server remotely, so we don't need to worry about compatibility issues, different operating systems, etc. The disadvantage is that Colab provides limited memory resources and very limited disc space since everything is stored in a cloud, so you can only use it to process small datasets.
+One option is to use Google Colab, for which you would need a Google account, which can be a personal gmail account or an institutional email account supported by Google (e.g. all Yachay Tech accounts are Google accounts). The advantage of using Google Colab is that all libraries are installed in a Linux server remotely, so we don't need to worry about compatibility issues, different operating systems, etc. The disadvantage is that Colab provides limited memory and computing resources as everything runs in a cloud, so you can only use it to process small datasets.
 
 ## How do I test Google Colab?
-1. Download this notebook: https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/My_first_notebook.ipynb
-2. Open Goole Colab
-3. Upload the notebook, and run it. If you see a plot of sin(x) vs. x, your local Google Colab works.
+1. Log into your Google account.
+2. Download this notebook: https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/My_first_notebook.ipynb
+3. Open Goole Colab
+4. Upload the notebook, and run it. If you see a plot of sin(x) vs. x, your local Google Colab works.
 
 ## Anaconda/Miniconda (Recommended, see https://anaconda.org/):
 Another option is to have python (and all the libraries you need to analyse your datasets) installed in your laptop. This can also be done in many ways, but anaconda is now very popular because it provides good portability and an interface that allows the user to include extra kernels for other programming languages. Anaconda has the advantage that you have all the code you need locally in your laptop. In the long term, using Anaconda will be much more advantageous.
