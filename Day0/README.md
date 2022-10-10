@@ -1,20 +1,16 @@
 # Introduction and preliminary activities
 
-Please read carefully all the information below and follow all the instructions **BEFORE** the start of the School.
+Please read carefully all the information given below.
 
-These instructions are very important as you should have all the preliminary tests done in your laptop BEFORE we start the School. Since time is short, during the School we will **NOT** be able to help with installation or laptop performance problems. All need to be well tested beforehand, so we can focus on coding and science.
+This School focuses on python, but there are a few lectures and tutorials on julia and R. We will use python 3.x (as python2 is not supported anymore). Similarly, we will mainly use jupyter notebooks (.ipynb) for the courses taught at this School.
 
-This School focuses on python, we will use python3 as python2 is not supported anymore.
-
-Similarly, we will use jupyter notebooks (.ipynb) for the courses taught at this School.
-
-- Jupyter notebooks are useful tools for learning programming because they provide a visual interface.
+- Jupyter notebooks are very useful tools for learning programming because they provide a visual interface.
 - You can see the results of your code live, instead of waiting till your script (.py) finishes running in a terminal.
 
 To be able to use python and jupyter notebooks in your laptop, there are several options:
 
-## Google Colab (see https://colab.research.google.com/):
-One option is to use Google Colab, for which you would need a Gmail account. The advantage of using Google Colab is that all libraries are installed in a linux server remotely, so we don't need to worry about compatibility issues, different operating systems, etc. The disadvantage is that Colab provides limited memory resources and very limited disc space since everything is stored in a cloud, so you can only use it to process small datasets.
+## OPTION 1: Google Colab (see https://colab.research.google.com/):
+One option is to use Google Colab, for which you would need a Google account, which can be a personal gmail account or an institutional email supported by Google (e.g. all Yachay Tech accounts are Google accounts). The advantage of using Google Colab is that all libraries are installed in a Linux server remotely, so we don't need to worry about compatibility issues, different operating systems, etc. The disadvantage is that Colab provides limited memory resources and very limited disc space since everything is stored in a cloud, so you can only use it to process small datasets.
 
 ## How do I test Google Colab?
 1. Download this notebook: https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/My_first_notebook.ipynb
