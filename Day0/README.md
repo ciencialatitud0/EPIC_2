@@ -10,6 +10,9 @@ This School focuses on python, but there are a few lectures and tutorials on jul
 To be able to use python and jupyter notebooks in your laptop, there are several options:
 
 ## OPTION 1: Google Colab (see https://colab.research.google.com/):
+
+<p style="color:blue">Note: We highly recommend this option for participants with little programming experience.</p>
+
 One option is to use Google Colab, for which you would need a Google account, which can be a personal gmail account or an institutional email supported by Google (e.g. all Yachay Tech accounts are Google accounts). The advantage of using Google Colab is that all libraries are installed in a Linux server remotely, so we don't need to worry about compatibility issues, different operating systems, etc. The disadvantage is that Colab provides limited memory resources and very limited disc space since everything is stored in a cloud, so you can only use it to process small datasets.
 
 ## How do I test Google Colab?
