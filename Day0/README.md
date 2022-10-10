@@ -12,18 +12,30 @@ To be able to use python and jupyter notebooks in your laptop, there are several
 
 ## OPTION 1: Google Colab (see https://colab.research.google.com/):
 
-** Important Note: We highly recommend this option for participants with little programming experience.**
+**Important Note: We highly recommend this option for participants with little programming experience.**
 
 One option is to use Google Colab, for which you would need a Google account, which can be a personal gmail account or an institutional email account supported by Google (e.g. all Yachay Tech accounts are Google accounts). The advantage of using Google Colab is that all libraries are installed in a Linux server remotely, so we don't need to worry about compatibility issues, different operating systems, etc. The disadvantage is that Colab provides limited memory and computing resources as everything runs in a cloud, so you can only use it to process small datasets.
 
 ## How do I test Google Colab?
-1. Log into your Google account.
-2. Download this notebook: https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/My_first_notebook.ipynb
-3. Open Goole Colab
-4. Upload the notebook, and run it. If you see a plot of sin(x) vs. x, your local Google Colab works.
 
-## Anaconda/Miniconda (Recommended, see https://anaconda.org/):
-Another option is to have python (and all the libraries you need to analyse your datasets) installed in your laptop. This can also be done in many ways, but anaconda is now very popular because it provides good portability and an interface that allows the user to include extra kernels for other programming languages. Anaconda has the advantage that you have all the code you need locally in your laptop. In the long term, using Anaconda will be much more advantageous.
+1. Log into your Google account.
+
+2. Open this notebook: [https://github.com/ciencialatitud0/EPIC_2/blob/main/Day0/my_first_notebook.ipynb](https://github.com/ciencialatitud0/EPIC_2/blob/main/Day0/my_first_python_notebook.ipynb)
+
+3. Clic on "Open in Google Colab".
+
+4. Run all the cells in this notebook. You can place the image of the worked example (which you can find here: https://github.com/ciencialatitud0/EPIC_2/blob/main/Day0/Cotopaxi_volcano.jpeg) or any other image into your "Colab Notebooks" folder in Google Drive.
+
+5. If you see a plot of sin(x) vs. x and the image of the Cotopaxi volcano, your local Google Colab works.
+
+6. Congrats, you are ready to follow all the python tutorials of EPIC 2.
+
+
+## OPTION 2: Anaconda/Miniconda (see https://anaconda.org/):
+
+**Important Note: We recommend this option only for participants with substantial Linux and programming experience.**
+
+Another option is to have python (and all the libraries you need to analyse your datasets) installed in your laptop. This can also be done in many ways, but anaconda is now very popular because it provides good portability and an interface that allows the user to include extra kernels for other programming languages. Anaconda has the advantage that you have all the code you need locally in your laptop. **In the long term, using Anaconda will be much more advantageous for you.**
 
 # Installation instructions
 
@@ -92,11 +104,7 @@ For testing and customising your installation on Linux/MaxOSX laptops/PCs, follo
 
 10. Once the notebook is open, you can start coding your first notebook:<br>
 
-https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/My_first_notebook.ipynb
-
-#### Option B: From within a jupyter notebok (this assumes notebooks are already installed):<br>
-
-https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/Installation_from_notebook.ipynb
+[https://github.com/ciencialatitud0/EPIC_2/blob/main/Day0/my_first_notebook.ipynb](https://github.com/ciencialatitud0/EPIC_2/blob/main/Day0/my_first_python_notebook.ipynb)
 
 
 ### On Windows:
