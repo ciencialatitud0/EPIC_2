@@ -141,7 +141,7 @@ You can find general installations guidlines for different platforms here: https
 
 Option 1: intall using anaconda
 
-Option 2: install by downloading the .dmg file for the relevant installation. Execute the .dmg file and drag the julia incon into the application folder. 
+Option 2: install by downloading the .dmg file for the relevant installation. Execute the .dmg file and drag the julia incon into the application folder. You should be able to open a julia terminal by dubble clicking the julia icon in the application folder.  
 
 ### On a Linux machine
 
