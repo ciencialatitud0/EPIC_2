@@ -129,17 +129,17 @@ Assumming all the steps above went well, and you were able to create your first 
 
 Please note that we will **NOT** have time to cover the basics in EPIC 2, so make sure you are familiar with the material above.
 
-# For the Particle Physics Tutorial
+# Only for the Particle Physics Tutorial:
 
-The perticle physics tutorial will use the Julia programing language. In the following we describe some options on how to install julia and how to add a julia kernel to a jupiter notebook or to Google Colab.
+The particle physics tutorial will use the Julia programming language. Below we describe some options on how to install julia and how to add a julia kernel to a jupiter notebook or to Google Colab.
 
 ## How to install Julia?
 
-You can find general installations guidlines for different platforms here: https://julialang.org/downloads/platform/
+You can find general installations guidelines for different platforms here: https://julialang.org/downloads/platform/
 
 ### On a Mac
 
-**Option 1:** intall using anaconda
+**Option 1:** install using anaconda:
 
 ~~~~html
   $ conda create --name juliaenv
@@ -155,7 +155,7 @@ After this you should be able to open julia (within the conda environment) by ty
 
 ### On a Linux machine
 
-**Option 1:** intall using anaconda
+**Option 1:** install using anaconda
 
 ~~~~html
   $ conda create --name juliaenv
@@ -185,3 +185,8 @@ Open a julia terminal. Then execute the following two lines in the Julia:
 
 ## How to add a Julia kernel to Google Colab?
 
+For this, we will use a template provided by Google Colab itself:
+
+https://github.com/ciencialatitud0/EPIC_2/blob/main/Day0/my_first_julia_notebook.ipynb
+
+This notebook remotely downloads and installs julia onto the GDrive cloud. Then, you just need to refresh the page and execute the next cells in the notebook. We added a few lines containing basic julia syntax and operations. If you all the results printed, you are good to go.
