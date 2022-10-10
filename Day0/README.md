@@ -157,6 +157,8 @@ After this you should be able to open julia (within the conda environment) by ty
 
 ### On Windows machine
 
+See the relevant instructions here: https://julialang.org/downloads/platform/
+
 ## How to add a Julia kernel to jupyter notebook?
 
 Open a julia terminal. Then execute the following two lines in the Julia:
