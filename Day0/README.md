@@ -17,7 +17,7 @@ To be able to use python and jupyter notebooks in your laptop, there are several
 One option is to use Google Colab, for which you would need a Gmail account. The advantage of using Google Colab is that all libraries are installed in a linux server remotely, so we don't need to worry about compatibility issues, different operating systems, etc. The disadvantage is that Colab provides limited memory resources and very limited disc space since everything is stored in a cloud, so you can only use it to process small datasets.
 
 ## How do I test Google Colab?
-1. Download this notebook: https://github.com/ciencialatitud0/EPIC_1/blob/main/Introduction/My_first_notebook.ipynb
+1. Download this notebook: https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/My_first_notebook.ipynb
 2. Open Goole Colab
 3. Upload the notebook, and run it. If you see a plot of sin(x) vs. x, your local Google Colab works.
 
@@ -91,11 +91,11 @@ For testing and customising your installation on Linux/MaxOSX laptops/PCs, follo
 
 10. Once the notebook is open, you can start coding your first notebook:<br>
 
-https://github.com/ciencialatitud0/EPIC_1/blob/main/Introduction/My_first_notebook.ipynb
+https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/My_first_notebook.ipynb
 
 #### Option B: From within a jupyter notebok (this assumes notebooks are already installed):<br>
 
-https://github.com/ciencialatitud0/EPIC_1/blob/main/Introduction/Installation_from_notebook.ipynb
+https://github.com/ciencialatitud0/EPIC_2/blob/main/Introduction/Installation_from_notebook.ipynb
 
 
 ### On Windows:
@@ -118,5 +118,5 @@ Assumming all the steps above went well, and you were able to create your first 
 - https://datacarpentry.org/python-ecology-lesson/jupyter_notebooks/
 - https://swcarpentry.github.io/python-novice-gapminder/
 
-Please note that we will **NOT** have time to cover the basics in EPIC 1, so make sure you are familiar with the material above.
+Please note that we will **NOT** have time to cover the basics in EPIC 2, so make sure you are familiar with the material above.
 
