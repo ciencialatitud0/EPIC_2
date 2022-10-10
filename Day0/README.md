@@ -135,7 +135,17 @@ The perticle physics tutorial will use the Julia programing language. In the fol
 
 ## How to install Julia?
 
+You can find general installations guidlines for different platforms here: https://julialang.org/downloads/platform/
+
 ### On a Mac
+
+Option 1: intall using anaconda
+
+Option 2: install by downloading the .dmg file for the relevant installation. Execute the .dmg file and drag the julia incon into the application folder. 
+
+### On a Linux machine
+
+### On Windows machine
 
 ## How to add a Julia kernel to jupyter notebook?
 
