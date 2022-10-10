@@ -155,6 +155,22 @@ After this you should be able to open julia (within the conda environment) by ty
 
 ### On a Linux machine
 
+**Option 1:** intall using anaconda
+
+~~~~html
+  $ conda create --name juliaenv
+  $ conda activate juliaenv
+  $ conda install python=3.7
+  $ conda install jupyter
+  $ conda install -c conda-forge julia
+~~~~
+
+After this you should be able to open julia (within the conda environment) by typing julia.
+
+**Option 2:** Installing from binary distribution. We only recommend this for people with extensive Unix experience. 
+
+See the relevant instructions here: https://julialang.org/downloads/platform/
+
 ### On Windows machine
 
 See the relevant instructions here: https://julialang.org/downloads/platform/
