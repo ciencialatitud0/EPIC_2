@@ -129,4 +129,15 @@ Assumming all the steps above went well, and you were able to create your first 
 
 Please note that we will **NOT** have time to cover the basics in EPIC 2, so make sure you are familiar with the material above.
 
+# For the Particle Physics Tutorial
 ## How to install Julia?
+
+## How to add a Julia kernel to jupyter notebook?
+
+Open a julia terminal. Then execute the following two lines in the Julia:
+~~~~html
+  $ using Pkg
+  $ Pkg.add("IJulia")
+~~~~
+
+
