@@ -139,7 +139,7 @@ You can find general installations guidlines for different platforms here: https
 
 ### On a Mac
 
-Option 1: intall using anaconda
+**Option 1:** intall using anaconda
 
 ~~~~html
   $ conda create --name juliaenv
@@ -151,7 +151,7 @@ Option 1: intall using anaconda
 
 After this you should be able to open julia (within the conda environment) by typing julia.
 
-Option 2: install by downloading the .dmg file for the relevant installation. Execute the .dmg file and drag the julia incon into the application folder. You should be able to open a julia terminal by dubble clicking the julia icon in the application folder.  
+**Option 2:** install by downloading the .dmg file for the relevant installation. Execute the .dmg file and drag the julia incon into the application folder. You should be able to open a julia terminal by dubble clicking the julia icon in the application folder.  
 
 ### On a Linux machine
 
