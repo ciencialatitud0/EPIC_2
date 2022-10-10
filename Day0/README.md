@@ -151,8 +151,8 @@ Option 2: install by downloading the .dmg file for the relevant installation. Ex
 
 Open a julia terminal. Then execute the following two lines in the Julia:
 ~~~~html
-  $ using Pkg
-  $ Pkg.add("IJulia")
+  julia> using Pkg
+  julia> Pkg.add("IJulia")
 ~~~~
 
 ## How to add a Julia kernel to Google Colab?
