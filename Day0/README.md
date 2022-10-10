@@ -129,3 +129,4 @@ Assumming all the steps above went well, and you were able to create your first 
 
 Please note that we will **NOT** have time to cover the basics in EPIC 2, so make sure you are familiar with the material above.
 
+## How to install Julia?
