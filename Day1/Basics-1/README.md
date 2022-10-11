@@ -8,11 +8,12 @@
 
 # Session 1: Data Analysis with python I
 This session describes basic packages, functions and methods to reading, writing and ploting a dataset.   
-For more info using [Python tutorial](https://docs.python.org/3/tutorial/).  
-Open Jupyter and getting started!
+
+Open Jupyter or [Google Colab](https://colab.research.google.com/)  and getting started!
 
 ```ruby
-require 'wine.csv' and 'dogs.png'  
-download 
+require files: 'wine.csv' and 'dogs.png'  
+download them
 add 'to your folder'
 ```
+For more info using [Python tutorial](https://docs.python.org/3/tutorial/).  
