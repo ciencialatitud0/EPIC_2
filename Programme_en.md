@@ -14,5 +14,5 @@
 | 11:40 - 12:30  | Particle Physics Talk (Cloé Girard-Carillo) |Tutorials Materials science / Particle physics | Tutorials Biophysics / Astrophysics | Tight-binding models Talk (Leonardo Basile) |
 | 12:30 - 13:20  | Cosmology Talk (Sylvain Vanneste)  | Tutorials Materials science / Particle physics | Tutorials Biophysics / Astrophysics | Student presentations |
 | 13:20 - 14:20  |  Break | Break | Break | Break |
-| 14:20 - 16:00  | Python Basics 2 Tutorial (Wladimir Banda-Barragán) | | | |
+| 14:20 - 16:00  | Python Basics 2 Tutorial (Wladimir Banda-Barragán) | Autonomous work | Autonomous work | Autonomous work |
 
