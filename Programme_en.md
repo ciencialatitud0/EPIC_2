@@ -12,7 +12,7 @@
 | 10:40 - 11:30  | Medical physics Talk (Mayra Pallaroso) | Particle Physics Talk (Cristina Mantilla) | Astrophysics Talk (Luz Ángela García Peñaloza) | Georeferenced count data Talk (Diego Morales) |
 | 11:30 - 11:40  |  Break | Break | Break| Break|
 | 11:40 - 12:30  | Particle Physics Talk (Cloé Girard-Carillo) |Tutorials Materials science / Particle physics | Tutorials Biophysics / Astrophysics | Tight-binding models Talk (Leonardo Basile) |
-| 12:30 - 13:20  | Cosmology Talk (TBC)  | Tutorials Materials science / Particle physics | Tutorials Biophysics / Astrophysics | Student presentations |
+| 12:30 - 13:20  | Cosmology Talk (Sylvain Vanneste)  | Tutorials Materials science / Particle physics | Tutorials Biophysics / Astrophysics | Student presentations |
 | 13:20 - 14:20  |  Break | Break | Break | Break |
 | 14:20 - 16:00  | Python Basics 2 Tutorial | | | |
 
