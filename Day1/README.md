@@ -5,7 +5,7 @@ Tuesday 11-October-2022
 
 | Time  |  |
 | ------------- | ------------- |
-| 8:00 - 8:50  | Python Basics (Lupe Villegas)  |
+| 8:00 - 8:50  | Python Basics 1 (Lupe Villegas)  |
 | 8:50 - 8:55  |  Break |
 | 8:55 - 9:45 | Artificial Inteligence talk (Albert Thie)  |
 | 9:45 - 10:35  | Materials Science Talk (Jorge Ontaneda)  |
