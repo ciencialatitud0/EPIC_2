@@ -1,6 +1,6 @@
 # EPIC 2: Day 1
 
-Tuesday 11-October-2022
+## Tuesday 11-October-2022
 
 
 | Time  |  |
