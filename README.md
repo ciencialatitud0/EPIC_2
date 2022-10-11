@@ -16,6 +16,8 @@ https://sites.google.com/view/ciencia-latitud-0/EPIC/EPIC-2
 ## Programa:
 https://github.com/ciencialatitud0/EPIC_2/blob/main/Programa_es.md
 
+https://indico.cern.ch/event/1189722/timetable/#20221011
+
 ## Organizado por:
 1. Grupo de Investigadores Latitud Cero.
 
