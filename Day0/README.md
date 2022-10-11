@@ -133,6 +133,11 @@ Please note that we will **NOT** have time to cover the basics in EPIC 2, so mak
 
 The particle physics tutorial will use the Julia programming language. Below we describe some options on how to install julia and how to add a julia kernel to a jupiter notebook or to Google Colab.
 
+In addition hdf files contianing data can be downloaded from this repository:
+https://filesender.renater.fr/?s=download&token=e534781a-4c80-4819-b178-f2568d38ae4d
+
+At least two files should be downloaded and saved in the same repository where you have your notebook or uploaded to your google collab. 
+
 ## How to install Julia?
 
 You can find general installations guidelines for different platforms here: https://julialang.org/downloads/platform/
