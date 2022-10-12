@@ -5,7 +5,7 @@ Wednesday 12-October-2022
 
 | Time  | Wednesday |
 | ------------- | ------------- |
-| 8:00 - 8:50  |  | Materials science Talk (Maximilian Menger)	| 
+| 8:00 - 8:50  |   Materials science Talk (Maximilian Menger)| 
 | 8:50 - 8:55  |  Break |
 | 8:55 - 9:45 |  Tutorials Materials science  (Edison Salazar)	/ Particle physics (Luis Manzanillas)| 
 | 9:45 - 10:35  |  Tutorials Materials science (Edison Salazar)	/ Particle physics (Luis Manzanillas)|
