@@ -33,7 +33,7 @@ $ git clone https://github.com/ciencialatitud0/EPIC_2.git
 - It is a step by step pipeline for segmenting cells in 2D fluorescence microscopy images (with labeled membranes)
 	* [Image_analysis_tutorial.ipynb](Image_analysis_tutorial.ipynb)
 	* GoogleColab:
-	[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github//hernanmorales-navarrete/IntroBioImageAnalysis/blob/main/Image_analysis_tutorial.ipynb)
+	[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ciencialatitud0/EPIC_2/blob/main/Day3/Biophysics/Image_analysis_tutorial.ipynb)
 
 
 ## Disclaimer
