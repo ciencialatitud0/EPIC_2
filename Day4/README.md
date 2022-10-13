@@ -4,7 +4,7 @@ Friday 14-October-2022
 
 | Time  | Friday |
 | ------------- | ------------- | 
-| 8:00 - 8:50  |  Climat science Talk (Oscar Chimborazo)|
+| 8:00 - 8:50  |  Climate science Talk (Oscar Chimborazo)|
 | 8:50 - 8:55  |  Break | 
 | 8:55 - 9:45 |  Micromagnetic simulations Talk (María José Benítez) |
 | 9:45 - 10:35  | Data Science Talk (Genevieve Shattow) |
