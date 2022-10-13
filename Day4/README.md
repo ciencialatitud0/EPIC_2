@@ -13,3 +13,4 @@ Friday 14-October-2022
 | 11:30 - 11:40  | Break | 
 | 11:40 - 12:30  | Tight-binding models Talk (Leonardo Basile) |
 | 12:30 - 13:20  | Student presentations |
+| 13:20 - 13:30  | Closure |
