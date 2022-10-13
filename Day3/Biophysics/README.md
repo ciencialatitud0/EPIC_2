@@ -25,7 +25,7 @@ $ git clone https://github.com/ciencialatitud0/EPIC_2.git
 
 	* [Intro_DigitalImages.ipynb](Intro_DigitalImages.ipynb)
 	* GoogleColab:
- 		[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ciencialatitud0/EPIC_2/blob/main/Day3/Biophysics/Intro_DigitalImages.ipyn)
+ 		[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ciencialatitud0/EPIC_2/blob/main/Day3/Biophysics/Intro_DigitalImages.ipynb)
  
  
 ### 2. BioImage Analysis with Python
