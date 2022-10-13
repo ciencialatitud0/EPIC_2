@@ -6,7 +6,7 @@ Basic knowledge in Python and Jupyter is required.
 ### 0. Preliminar information
 
 - Please create a local copy of the code and required files by cloning the repository:
-$ git clone https://github.com/hernanmorales-navarrete/IntroBioImageAnalysis.git
+$ git clone https://github.com/ciencialatitud0/EPIC_2.git
 
 - If you use GoogleColab (see https://colab.research.google.com/):
 	- Upload the notebooks and the image data (tiffs and jpgs)
