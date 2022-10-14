@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Modelling georeferenced count data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Diego Morales-Navarrete" />
+    <script src="DiegoMoralesEPIC2_files/header-attrs/header-attrs.js"></script>
+    <script src="DiegoMoralesEPIC2_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="DiegoMoralesEPIC2_files/pymjs/pym.v1.js"></script>
+    <script src="DiegoMoralesEPIC2_files/widgetframe-binding/widgetframe.js"></script>
+    <link rel="stylesheet" href="blackboard-red.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: right, middle, inverse, titular
+
+background-image: url("figures/blackboard.png")
+background-size: cover
+
+# Modelling georeferenced count data 
+## **A brief tutorial using GeoModels**
+### Diego Morales-Navarrete
+### EPIC2-14/10/2022
+
+---
+
+# Georeferenced count data
+
+--
+&lt;center&gt;
+<div id="htmlwidget-1159972f09f5e95fec5b" style="width:700px;height:450px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1159972f09f5e95fec5b">{"x":{"url":"figures//widgets/widget_unnamed-chunk-1.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+&lt;/center&gt;
+---
+
+# Statistical analysis of georeferenced count data
+
+--
+
+- Account for spatial dependence
+
+--
+
+- Predict values at new locations
+
+--
+
+.center[
+&lt;img src="fig/Intro1.png" width="535" class="framed" /&gt;
+]
+---
+
+# Current Approaches vs. Novel Approach
+
+--
+.left-board[
+**.red[Current Approaches]**
+{{content}}
+
+]
+--
+
+- Hierarchical models (De Oliveira, 2013)
+{{content}}
+
+--
+  * Generalized Linear Mixed Models (GLMM) (Breslow and Clayton, 1993)
+  {{content}}
+
+--
+  * Poisson Log-Gaussain (LG) random fields (Diggle, Tawn, and Moyeed, 1998a)
+    {{content}}
+
+--
+* Transformed Gaussian random fields (Prates, Dey, Willig, and Yan, 2015)&lt;br&gt;
+  {{content}}
+
+
+--
+
+👎 Mean-square discontinuity
+  {{content}}
+
+--
+- Gaussian Copula (GC) models (Han and De Oliveira, 2016)&lt;br&gt;
+{{content}}
+
+--
+👎 Non underlying physical mechanism
+
+--
+.right-board[
+**.red[Novel Approach]**
+{{content}}
+]
+--
+
+- Characterization of random fields through a Gaussian random field (GRF)
+
+{{content}}
+
+--
+
+- Apply a set of transformations to GRFs 
+{{content}}
+
+--
+
+
+👍 Mean-square continuity
+{{content}}
+
+--
+
+👎 Finite dimensional distribution unknown
+
+---
+
+# Gaussian Random Fields
+
+A zero mean and unit variance real-valued random field 
+`$$G=\{G(\mathbf{s}):\mathbf{s}\in A\}$$` 
+
+with
+`$$Corr(G(\mathbf{s}),G(\mathbf{s}+\mathbf{h}))\equiv
+\rho_G(\mathbf{h}):=\rho(\mathbf{h}),\;\;\mathbf{h}\in A,$$`
+is  called a standard GRF, if `\(\forall\)` `\(n\)`,
+`\((\mathbf{s}_1,\ldots,\mathbf{s}_n)\)` and  `\(\mathbf{G}=(G(\mathbf{s}_1),\ldots,G(\mathbf{s}_n))^\top\)` then
+`$$\mathbf{G} \sim N_n(\boldsymbol{0},[\rho(\mathbf{h})]_{i,j=1}^n)$$`
+--
+
+- Spatial Euclidean setting `\(A \subseteq \mathbb{R}^d\)`
+- Space-time :  `\(A \subseteq \mathbb{R}^d\times\mathbb{R}\)` 
+- Spherical domain : `\(A  \subseteq \mathcal{S}^d=\{    \mathbf{s}\in \mathbb{R}^{d+1}: ||\mathbf{s}||=D \}\)`, `\(D&gt;0\)`
+
+---
+# Gaussian Random Fields
+
+👍 Characterized by a mean structure and a valid correlation function.
+
+--
+
+👍 Parametric and non-parametric correlations functions.
+
+--
+
+👍 Allow describing some geometrical properties.
+
+--
+
+👎 Gaussianity is rarely met in real data.
+
+---
+
+# Exponential random field
+
+Let `\(G=\{G(\mathbf{s}), \mathbf{s} \in A \}\)` be a zero mean and unit variance GRF with correlation function `\(\rho(\mathbf{h})\)`.
+
+Let `\(G_1,G_2\)` be two independent copies of `\(G\)`. Then, the random field  `\(W=\{W(\mathbf{s}), \mathbf{s}\in A\}\)` is defined as follows:
+
+$$
+   W(\mathbf{s}) :=  \frac{1}{2\lambda(\mathbf{s})}\sum_{k=1}^{2} G^2_k({\mathbf{s}}),
+$$
+where `\(\lambda(\mathbf{s})&gt;0\)` is a non-random function, is a random field with **exponential marginals**. 
+
+--
+
+-  Marginally `\(W(\mathbf{s})\sim Exp(\lambda(\mathbf{s}))\)`
+
+--
+
+- `\(\rho_{_W}(\mathbf{h})=\rho^2(\mathbf{h})\)`
+
+---
+
+# A new class of counting random fields
+###Poisson random fields
+
+Let `\(Y_1,Y_2,\ldots\)` be an infinite sequence of independent copies of a positive  continuous random field `\(Y=\{Y(\mathbf{s}):\mathbf{s}\in A\}\)` with underlying correlation `\(\rho(\mathbf{h})\)`. If `\(Y\equiv W\)`, then the Poisson random field, `\(N:= \{N(\mathbf{s}), \mathbf{s}\in A\}\)`, `\(t\geq 0\)`, is defined as:
+
+`$$N(\mathbf{s}):=
+	\begin{cases}0
+	&amp;if \quad 1&lt;S_1(\mathbf{s}) \\
+	\max\limits_{n\geq 1}\{  S_n(\mathbf{s})\leq  1\} &amp; if \quad    S_1(\mathbf{s}) \leq 1 \end{cases}$$`
+where, `\(S_n(\mathbf{s})=\sum\limits_{i=1}^{n}W_i(\mathbf{s})\)` is the `\(n\)`-fold convolution of `\(W\)`. 
+
+- Marginally `\(N(\mathbf{s})\sim \mathrm{Poisson}(\lambda(\mathbf{s}))\)`.
+
+---
+
+### Poisson random fields: Non-stationary correlation function
+
+Let `\(N\)` be a non-stationary Poisson random field with underlying correlation `\(\rho(\mathbf{h})\)`. Then,
+
+`$$\rho_N(\mathbf{s}_i,\mathbf{s}_j)=\dfrac{\rho^2(\mathbf{h})(1-\rho^2(\mathbf{h}))}{\sqrt{\lambda(\mathbf{s}_i)\lambda(\mathbf{s}_j)}}\sum\limits_{r=0}^{\infty}\gamma^*\left(r+1,\dfrac{\lambda(\mathbf{s}_i)}{1-\rho^2(\mathbf{h})},  \dfrac{\lambda(\mathbf{s}_j)}{1-\rho^2(\mathbf{h})}\ \right),$$`
+
+with `\(\mathbf{h}=\mathbf{s}_i-\mathbf{s}_j\)` and `\(\gamma^{\star}\left(a,x,x'\right)=\gamma^{\ast}\left(a,x\right)\gamma^{\ast}\left(a,x' \right)\)`.
+
+- Stationarity depends on `\(\lambda(\mathbf{s})\)`.
+- `\(N\)` is mean-square continuous if and only if `\(G\)` is too.
+- If `\(\lambda \rightarrow  \infty\)` then `\(\rho_N(\mathbf{h})= \rho^2(\mathbf{h})\)`.
+
+---
+
+### Poisson random fields: Bivariate distribution
+
+Let  `\(N(\mathbf{s})\)` a Poisson random field with underlying correlation `\(\rho(\mathbf{h})\)`. Then the bivariate pdf  of `\(N_{ij}=(N(\mathbf{s}_i),N(\mathbf{s}_j))^\top\)`, `\(\Pr(N(\mathbf{s}_i)=n,N(\mathbf{s}_j)=m)=p_{ij}\)` , is given by:
+
+`$$p_{ij}= 
+	\begin{cases}
+	[F_0-F^i-F^j+F]**F_n(\lambda(\mathbf{s}_i),\lambda(\mathbf{s}_j))	&amp;if \quad n=m\\
+	[F^i_{r}-F^i_{r+1}-F^i_{r-1}**F+F^i_{r}**F]**F_{m}(\lambda(\mathbf{s}_i),\lambda(\mathbf{s}_j)) &amp; if \quad n&gt;m,\\
+	&amp;  n=m+r\\
+	[F^j_{r}-F^j_{r+1}-F^j_{r-1}**F+F^j_{r}**F]**F_{n}(\lambda(\mathbf{s}_i),\lambda(\mathbf{s}_j)) &amp; if \quad n&lt;m,\\
+	&amp;  m=n+r 	
+	\end{cases},$$`
+
+where  `\(**\)` is the  double convolution, `\(F^k\)` is the marginal cdf of `\(W(\mathbf{s}_k)\)`, `\(F\)` is the bivariate cdf of `\(W\)`, `\(F^k_r\)` is the marginal cdf of `\(S(\mathbf{s}_r)\)` and `\(F_r\)` is the bivariate cdf of `\(S_r\)`.
+
+--
+
+- `\(\rho_N(\mathbf{h})=0\)` `\(\implies\)` `\(\Pr(N(\mathbf{s}_i)=n,N(\mathbf{s}_j)=m)=\Pr(N(\mathbf{s}_i)=n)\Pr(N(\mathbf{s}_j)=m)\)`
+---
+
+# Zero inflated Poisson (ZIP) random field
+
+Let `\(B = \{B(\mathbf{s}),\mathbf{s}\in A\}\)` be a Bernoulli random field such that `\(B(\mathbf{s})=1_{(-\infty,0)}(G(\mathbf{s}))\)` where `\(G\)` is a GRF with `\(E(G(\mathbf{s})) = \theta(\mathbf{s})\)`, unit variance and correlation function `\(\rho^*(\mathbf{h})\)`.    
+
+Let `\(N\)` be  a Poisson random field with `\(E(N(\mathbf{s})) = \lambda(\mathbf{s})\)` and underlying correlation `\(\rho(\mathbf{h})\)`. 
+
+If `\(B \perp\!\!\!\perp N\)`, our proposed ZIP random field
+is given by `\(N^{\ast}:= \{N^{\ast}(\mathbf{s}), \mathbf{s}\in A\}\)` defined as:   
+`$$N^{\ast}(\mathbf{s})=B(\mathbf{s})N(\mathbf{s}).$$`
+The marginal distribution is given by  
+
+`$$\Pr(N^*(\mathbf{s})=n^*(\mathbf{s}))=
+	\begin{cases}p(\mathbf{s})+(1-p(\mathbf{s}))e^{-\lambda(\mathbf{s})}
+	&amp;\mbox{if} \quad n^*(\mathbf{s})=0\\
+(1-p(\mathbf{s}))\dfrac{\lambda(\mathbf{s})^{n^*(\mathbf{s})}e^{-\lambda(\mathbf{s})}}{n^*(\mathbf{s})!} &amp; \mbox{if} \quad    n^*(\mathbf{s})=1,2,\ldots \end{cases}.$$`
+
+---
+
+# Weighted pairwise likelihood-based inference
+
+Let `\((Q(\mathbf{s}_i),Q(\mathbf{s}_j))^\top\)` with (supposed) known pdf. Let `\(\boldsymbol{\theta}=(\boldsymbol{\beta}^{\top},\boldsymbol{\alpha}^{\top})\)` be the vector of unknown 
+parameters.
+
+The weighted pairwise log-likelihood objective function is then given by
+
+`$$pl(\boldsymbol{\theta})=\sum\limits_{i=1}^{l-1}\sum\limits_{j=i+1}^{l}\log(\Pr(Q(\mathbf{s}_i)=n_i,Q(\mathbf{s}_j)=n_j))\zeta_{ij}$$`
+where `\(\zeta_{ij}\)` is a non-negative weight, such that
+
+`$$\zeta_{ij} = \begin{cases}1 &amp; ||\mathbf{s}_i-\mathbf{s}_j||\leq \xi,\\
+0 &amp; \text{otherwise} \end{cases}$$`
+
+Then `\(\widehat{\boldsymbol{\theta}}:=\textrm{argmax}_{\boldsymbol{\theta}\in \boldsymbol{\Theta}}pl(\boldsymbol{\theta})\)`.
+
+---
+
+# wpl-based inference (misspecification)
+
+The computation of the `\(wpl\)` estimator can be **computationally demanding**.
+
+--
+
+A misspecified `\(wpl\)` estimator requires a **smaller computational burden**.
+
+--
+
+Poisson model:
+`$$N(\mathbf{s}): E(N(\mathbf{s}))=Var(N(\mathbf{s}))=\lambda(\mathbf{s}),\rho_{N}(\mathbf{s}_i,\mathbf{s}_j)$$`
+`$$\Downarrow$$`
+`$$\mbox{GRF } G(\mathbf{s}):E(G(\mathbf{s}))=Var(G(\mathbf{s}))=\lambda(\mathbf{s}),\rho_{G}(\mathbf{s}_i,\mathbf{s}_j)=\rho_{N}(\mathbf{s}_i,\mathbf{s}_j)$$`
+
+
+---
+
+# Prediction: optimal linear predictor
+
+The optimal predictor (mean squared error criterion) **requires** the **finite dimensional distribution**.
+
+--
+
+**Gaussian misspecification** allows to build an optimal linear predictor.
+
+--
+
+If the goal is `\(\widehat{Q(\mathbf{s}_0)}\)` given the vector of spatial observations `\(\mathbf{Q}\)` at `\(\mathbf{s}_1,\mathbf{s}_2,\ldots,\mathbf{s}_l\)`, then the optimal linear Gaussian prediction is given by: 
+
+`$$\widehat{Q(\mathbf{s}_0)}=\mu(\mathbf{s}_0)+ \boldsymbol{c}^\top \Sigma^{-1}(\mathbf{Q}-\boldsymbol{\mu})$$`
+where `\(\boldsymbol{\mu}=(\mu(\mathbf{s}_1),\ldots,\mu(\mathbf{s}_l))^\top\)` with `\(\mu(\mathbf{s})=E(Q(\mathbf{s}))\)`, `\(\boldsymbol{c}=[\sqrt{Var(Q(\mathbf{s}_0))Var(Q(\mathbf{s}_i))}\rho_{Q}(\mathbf{s}_0,\mathbf{s}_i)]_{i=1}^l\)` and `\(\Sigma\)` is the variance-covariance matrix.
+
+--
+
+The mean squared error is: `\(\mbox{MSE}(\widehat{Q(\mathbf{s}_0)})=\mu(\mathbf{s}_0) - \boldsymbol{c}^\top\Sigma^{-1}\boldsymbol{c}\)`.
+
+---
+
+.center[
+&lt;img src="fig/GeoModels.png" width="1016" class="framed" /&gt;
+]
+
+The `GeoModels` package provides a set of procedures for simulation, estimation and prediction of spatial and spatio-temporal random fields.
+
+Instalation: `install.packages("GeoModels")` 
+---
+
+# Simulation
+
+
+```r
+library(GeoModels);
+model="Poisson";  # model name in the  GeoModels package
+set.seed(1989);
+N=500;
+coords=cbind(runif(N),runif(N));
+# correlation parameters
+corrmodel = "Matern"; 
+scale = 0.25/3; 
+smooth =0.5;
+nugget =0;
+# mean parameter
+mean = 1.5 # regression paramteres 
+param=list(nugget=nugget,mean=mean, scale=scale, smooth=smooth, sill=1);
+*data_s &lt;- GeoSim(coordx=coords ,corrmodel=corrmodel , param=param ,model=model)$data
+
+c(mean(data_s),var (data_s),exp(mean))
+```
+
+```
+## [1] 4.516000 4.402549 4.481689
+```
+
+---
+# Estimation
+
+
+```r
+optimizer="nlminb";
+fixed1&lt;-list(sill=1,nugget=0,smooth=0.5);
+start1&lt;-list(mean=1.5,scale=0.25/3);
+lower&lt;-list(mean=-5,scale=0);
+upper&lt;-list(mean=5,scale=2);
+
+maxdist=0.03;
+corrmodel = "Matern"; 
+## pairwise poisson likelihhod
+*fit1 &lt;- GeoFit(data=data_s,coordx=coords,corrmodel=corrmodel,
+optimizer=optimizer,lower=lower,upper=upper,maxdist=maxdist,start=start1,fixed=fixed1, model = model);
+## misspecified gaussian likelihhod
+fit2 &lt;- GeoFit(data=data_s,coordx=coords,corrmodel=corrmodel, 
+ optimizer=optimizer, lower=lower,upper=upper,maxdist=maxdist,start=start1,fixed=fixed1, model = "Gaussian_misp_Poisson") 
+rbind(fit1$param,fit2$param)
+```
+
+```
+##          mean     scale
+## [1,] 1.511203 0.0793003
+## [2,] 1.520486 0.0622061
+```
+---
+
+
+```r
+print(fit1)
+## 
+## ##################################################################
+## Maximum  Composite-Likelihood Fitting of Poisson Random Fields
+## 
+## Setting: Marginal Composite-Likelihood 
+## 
+## Model: Poisson 
+## 
+## Type of the likelihood objects: Pairwise 
+## 
+## Covariance model: Matern 
+## 
+## Optimizer: nlminb 
+## 
+## Number of spatial coordinates: 500 
+## Number of dependent temporal realisations: 1 
+## Type of the random field: univariate 
+## Number of estimated parameters: 2 
+## 
+## Type of convergence: Successful 
+## Maximum log-Composite-Likelihood value: -1347.56
+## 
+## Estimated parameters:
+##   mean   scale  
+## 1.5112  0.0793  
+## 
+## ##################################################################
+```
+
+---
+
+
+```r
+# Empirical estimation of the variogram:
+vario &lt;- GeoVariogram(data=data_s,coordx=coords,maxdist=0.4)
+# comparing empirical and estimated semi-variograms 
+GeoCovariogram(fit1,show.vario=TRUE, vario=vario,pch=20)
+```
+
+&lt;img src="figures/unnamed-chunk-7-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Prediction
+
+
+```r
+require(fields)
+xx=seq(0,1,0.015) 
+loc_to_pred=as.matrix(expand.grid(xx,xx)) 
+param_est=as.list(c(fit1$param,fixed1))
+corrmodel = "Matern"; 
+pr=GeoKrig(data=data_s, coordx=coords,loc=loc_to_pred,
+     corrmodel=corrmodel,model=model,mse=TRUE,param= param_est)
+colour = rainbow(100)
+# map of  data
+quilt.plot(coords[,1], coords[,2], data_s,col=colour,main="Data")  
+# map prediction
+map=matrix(pr$pred,ncol=length(xx))
+image.plot(xx,xx,map,col=colour,xlab="",ylab="",main="Prediction")
+#map mean squared error
+map_mse=matrix(pr$mse,ncol=length(xx))
+image.plot(xx,xx,map_mse,col=colour,xlab="",ylab="",main="MSE")
+```
+
+---
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="figures/unnamed-chunk-8-1.png" width="33%" /&gt;&lt;img src="figures/unnamed-chunk-8-2.png" width="33%" /&gt;&lt;img src="figures/unnamed-chunk-8-3.png" width="33%" /&gt;
+
+---
+# Conclusions and future work
+
+- Our proposal  **allows to overcome mean-square discontinuity** present in hierarchical models.
+
+--
+
+- **Partially inherit**  the geometrical properties of the underlying random field.
+
+--
+
+- The proposed methodology can be **easily adapted** to  space-time or spherical data.
+
+--
+
+- An **inferential approach based on** `\(\boldsymbol{wpl}\)` could be an **effective solution for estimating** the unknown parameters.
+
+--
+
+- The computation of the bivariate distributions proposed can be **computationally demanding** for large data set.
+
+--
+
+- A misspecified `\(wpl\)`  **requires smaller computational burden** .
+
+---
+# Conclusions and future work
+
+- Limitation: Poisson distribution restricts the **variance to be equal to the  mean**.
+
+--
+
+- The proposed Poisson random field can be used as **building blocks**.
+
+--
+
+- We propose count random fields that can handle spatial (spatio-temporal) data with **excess of zeros**.
+
+--
+
+- The proposed models are **good candidates** to model real data and an alternative to GC models. They are **less computationally expensive**.
+
+--
+
+- The models and the method of estimation considered in this work **are implemented** in  the R package  `GeoModels`.
+
+--
+
+- We can **enrich the new class of counting random fields** if we consider positive random fields other than exponential.
+---
+# References
+
+Breslow, N. E. and D. G. Clayton (1993). "Approximate Inference in Generalized Linear Mixed
+Models". In: _Journal of the American Statistical Association_ 88.421, pp. 9-25. DOI:
+[10.1080/01621459.1993.10594284](https://doi.org/10.1080%2F01621459.1993.10594284). eprint:
+https://doi.org/10.1080/01621459.1993.10594284. URL:
+[https://doi.org/10.1080/01621459.1993.10594284](https://doi.org/10.1080/01621459.1993.10594284).
+
+De Oliveira, V. (2013). "Hierarchical Poisson models for spatial count data". In: _Journal of
+Multivariate Analysis_ 122, pp. 93-408.
+
+Diggle, P., J. Tawn, and R. Moyeed (1998a). "Model-based geostatistics". In: _Journal of the
+Royal Statistical Society, Series C_ 47, pp. 299-350.
+
+Han, Z. and V. De Oliveira (2016). "On the Correlation Structure of Gaussian Copula Models for
+Geostatistical Count Data". In: _Australian &amp; New Zealand Journal of Statistics_ 58, pp. 47-69.
+
+Prates, M., D. Dey, M. Willig, et al. (2015). "Transformed Gaussian Markov random fields and
+spatial modeling of species abundance". In: _Spatial Statistics_ 14, pp. 382-399.
+---
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "dark",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
