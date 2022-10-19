@@ -99,6 +99,8 @@ class RescaleVelocity:
             """
             gama_ji = beta/alpha
             self.new_velocity(state, gama_ji, direct)
+            hop = "not"
+            return hop
         else:
             """
             If this condition is satisfied, a hopping from 
@@ -112,6 +114,8 @@ class RescaleVelocity:
             else:
                 gama_ji = (beta - np.sqrt(beta**2 + 4*alpha*diff))/(2*alpha)
                 self.new_velocity(state, gama_ji, direct)
+            hop = "yes"
+            return hop
 
 class SurfaceHopping:
 
@@ -223,10 +227,12 @@ class SurfaceHopping:
                 if hopps[i]:
                     state_new = state.states[i]
                     break
-            else:
-                state_new = state.instate
+            #else:
+            #    state_new = state.instate
             rescale = RescaleVelocity(state, ene_cou_grad)
-            rescale.rescale_velocity(state, state_new)
+            hop =  rescale.rescale_velocity(state, state_new)
+            if hop == "not":
+                state_new = state.instate
         else:
             state_new = state.instate
         state.instate = state_new
